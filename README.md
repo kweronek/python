@@ -1,2 +1,14 @@
-# python
-boiler-plate and set-up for python on different platforms
+# Grundinstallation python
+## Ubuntu
+## Mac
+## Raspberry PI
+tbd
+## Windows
+tbd
+# 
+## pip
+## pipenv
+## venv
+## pyenv
+# 
+## pyCharm
