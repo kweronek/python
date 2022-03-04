@@ -100,6 +100,7 @@ Das Package random enthält diverse Funktionen zur Erzeugung von (Pseudo-)Zufall
 
 ## Web
 ### django (obligatorisch)
+Das Package [django](django/README.ms) ist für die Entwicklung von Frontends gut geeignet.
 ### flask (bei Bedarf)
 
 ## Network
