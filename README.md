@@ -4,9 +4,11 @@
 
 ## Mac
 ### Grundsätzlich
+```
 brew install python
-### optional
+```
 
+### optional
 ## Raspberry PI
 tbd
 ## Windows
@@ -17,24 +19,34 @@ tbd
 ## pyCharm (empfohlen)
 ## Visual Studio Code (optional)
 ```linux
-brew install visual-studio-code
+$ brew install visual-studio-code
 ```
 ## Textmate (informell)
 
 # Pythonpakete
 ## Paket- und Environment-Manager
-### Paketmanager pip
+### Paketmanager pip (obligatorisch)
+gehört zu Python, wird bei brew mitinstalliert by Unix:
+```
+$ sudo apt update
+$ sudo apt install python3-pip
+```
 ### Paket- und Environment-Manager pipenv
-#### install
-$ pip install --user pipenv
-### Environment-Manager virtualenv
-#### install
-pip install virtualenv
+### Environment-Manager virtualenv (obligatorisch)
+```
+$ pip install virtualenv
+```
+#### basic usage
 #### basic usage
 $ cd project_folder
 $ virtualenv myvenv
+### Paket- und Environment-Manager pipenv
+```
+$ pip install --user pipenv
+```
 ### Environmaen
 ### Environment-Manager pyenv
-brew install python pyenv
+```
+$ brew install python pyenv
+```
 ### Environment-Manager venv
-### Paket- und Environment-Manager pipenv
