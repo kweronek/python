@@ -1,4 +1,11 @@
 # Grundinstallation python
+Dies ist ein Spickzettel für Python. Es wird auf Version 3 focussiert. Ist Version 2 erforderlich wird darauf hingewiesen.
+Im Zweifelsfall wird eine Plattform-unabhängige Installationsvariant angegeben. Ggf. wird per link auf spezifische Varianten hingewiesen (Ausnahme brew).
+Installationsangaben beziehen sich auf Ubuntu und MacOS.
+Windows wird von hier nicht unterstütz, ist aber in den meisten Fällen möglich.
+
+Empfehlung alias python=python3
+
 ## Ubuntu (obligatorisch)
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -17,21 +24,39 @@ https://allurcode.com/install-latest-version-of-python-on-raspberry-pi/
 
 ## Paket- und Environment-Manager
 ### Paketmanager pip (obligatorisch)
-gehört zu Python, wird bei brew mitinstalliert by Unix:
+Der Paketmanager pip gehört zu Python, wird bei brew python mitinstalliert, bei Linux comme-ci comme-ca.
 ```
-sudo apt update
-sudo apt install python3-pip
+python3 -m pip install --user --upgrade pip
 ```
-### Environment-Manager virtualenv/venv (obligatorisch)
-Voraussetzung pip installiert.
+In order to keep your environment consistent, it’s a good idea to “freeze” the current state of the environment packages. To do this, run:
 ```
+pip freeze > requirements.txt
+```
+This will create a requirements.txt file, which contains a simple list of all the packages in the current environment, and their respective versions. You can see the list of installed packages without the requirements format using pip list. Later it will be easier for a different developer (or you, if you need to re-create the environment) to install the same packages using the same versions:
+```
+pip install -r requirements.txt
+```
+This can help ensure consistency across installations, across deployments, and across developers.
+
+### Environment-Manager venv (obligatorisch)
+Voraussetzung pip installiert. (Anm. für Pyhton2 verwende virtualenv)
+```
+python3.9 -m pip install --user virtualenv
 pip install virtualenv
 ```
 #### basic usage
+To create a virtual environment, head to your project directory and run the following command.
 ```
-cd project_folder
-virtualenv myvenv
+python -m venv venv
 ```
+Before using your virtual environment on your project, you need to activate it using
+```
+source venv/bin/activate
+```
+
+
+
+
 ### Paket- und Environment-Manager pipenv (optional)
 ```
 pip install --user pipenv
@@ -49,6 +74,8 @@ https://www.jetbrains.com/help/pycharm/installation-guide.html
 Auf Ubuntu:
 sudo snap install --classic code
 
+Auf openSuSe
+
 Auf MAC:
 ```linux
 brew install visual-studio-code
@@ -56,17 +83,16 @@ brew install visual-studio-code
 andere:
 https://code.visualstudio.com/
 
-## Textmate (nur MAC, informell)
-```
-brew install --cask textmate
-```
-
 # Pythonpakete
-
+Die Packages der Python-Standard-Library findet man hier.
+Fast alle anderen Packages finden sich hier. 
 ## Basics
 ### time (empfohlen)
+Das Package time enthält Standardzeitfunktionen, jedoch keine Datums- und Echtzeitdaten.
 ### numpy (empfohlen)
+Das Package numpy enthält im wesentlichen numerische Arrays.
 ### random (bei Bedarf)
+Das Package random enthält diverse Funktionen zur Erzeugung von (Pseudo-)Zufallszahlen.
 
 ## Grafik
 ### mathplotlib (empfohlen)
