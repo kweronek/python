@@ -16,7 +16,9 @@ tbd
 # IDEs
 ## pyCharm (empfohlen)
 ## Visual Studio Code (optional)
+```linux
 brew install visual-studio-code
+
 ## Textmate (informell)
 
 # Pythonpakete
