@@ -22,6 +22,16 @@ brew install visual-studio-code
 # Pythonpakete
 ## Paket- und Environment-Manager
 ### Paketmanager pip
+### Paket- und Environment-Manager pipenv
+#### install
+$ pip install --user pipenv
+### Environment-Manager virtualenv
+#### install
+pip install virtualenv
+#### basic usage
+$ cd project_folder
+$ virtualenv myvenv
+### Environmaen
 ### Environment-Manager pyenv
 brew install python pyenv
 ### Environment-Manager venv
