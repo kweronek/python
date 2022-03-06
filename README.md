@@ -1,8 +1,8 @@
 # Grundinstallation python
-Dies ist ein Spickzettel für Python. Es wird auf Version 3 focussiert. Ist Version 2 erforderlich wird darauf hingewiesen.
-Im Zweifelsfall wird eine Plattform-unabhängige Installationsvariant angegeben. Ggf. wird per link auf spezifische Varianten hingewiesen (Ausnahme brew).
+Dies ist ein Spickzettel für Python 3. Ist ausnahmsweise die Version 2 erforderlich wird darauf hingewiesen. Die letzte Version 2 war 2.7.3 mit Supportende 01.01.2021.
+Im Zweifelsfall wird eine Plattform-unabhängige Installationsvariante angegeben. Ggf. wird per link auf spezifische Varianten hingewiesen (Ausnahme brew).
 Installationsangaben beziehen sich auf Ubuntu und MacOS.
-Windows wird von hier nicht unterstützt, ist aber in den meisten Fällen möglich.
+Windows wird hier nicht unterstützt, ist aber in den meisten Fällen möglich.
 
 Empfehlung: `alias pyt=python3`
 
@@ -64,7 +64,7 @@ This can help ensure consistency across installations, across deployments, and a
 
 Zum deinstallieren:
 ```
-pip3 -m <paketname> deinstall
+pip3 uninstall - <paketname>
 ```
 ## Environment-Manager venv/virtualenv (obligatorisch)
 Voraussetzung pip installiert. (Anm. für Python2 verwende virtualenv)
