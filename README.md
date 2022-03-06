@@ -4,11 +4,12 @@ Im Zweifelsfall wird eine Plattform-unabhängige Installationsvariant angegeben.
 Installationsangaben beziehen sich auf Ubuntu und MacOS.
 Windows wird von hier nicht unterstützt, ist aber in den meisten Fällen möglich.
 
-Empfehlung alias python=python3
+Empfehlung: ```alias pyt=python3
 
 ## Ubuntu (obligatorisch)
-Ubuntu 20.04 LTS hat bereits vorinstalliert python 2.7.18 und pyton 3.8.10
-Aktuell (3/2022) ist pip3 auf Ubuntu 20.04 noch tricky. Siehe:
+Ubuntu 20.04 LTS hat bereits vorinstalliert python 2.7.18 und pyton 3.8.10 .
+Aktuell (3/2022) scheint 3.9.10 sinnvoll.
+Der Paket-Manager pip3 ist auf Ubuntu 20.04 noch tricky zu installieren. Siehe:
 https://cloudbytes.dev/snippets/upgrade-python-to-latest-version-on-ubuntu-linux
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -32,14 +33,14 @@ brew install python
 ## Raspberry PI (optional)
 https://allurcode.com/install-latest-version-of-python-on-raspberry-pi/
 
-## Paket- und Environment-Manager
-### Paket-Manager pip (obligatorisch)
+# Paket- und Environment-Manager
+## Paket-Manager pip (obligatorisch)
 Der Paketmanager pip gehört zu Python, wird bei brew python mitinstalliert, bei Linux comme-ci comme-ca, ansonsten:
 ```
 sudo apt install python3-pip
 pip3 --version
 ```
-Installation von Paketen
+### Installation von Paketen mit pip3
 ```
 python3 -m <modulname> install pip3
 ```
@@ -61,13 +62,17 @@ pip3 install -r requirements.txt
 ```
 This can help ensure consistency across installations, across deployments, and across developers.
 
-### Environment-Manager venv (obligatorisch)
-Voraussetzung pip installiert. (Anm. für Pyhton2 verwende virtualenv)
+Zum deinstallieren:
 ```
-python3.9 -m pip install --user virtualenv
+pip3 -m <paketname> deinstall
+```
+## Environment-Manager venv/virtualenv (obligatorisch)
+Voraussetzung pip installiert. (Anm. für Python2 verwende virtualenv)
+```
+python3 -m pip install --user virtualenv
 pip3 install virtualenv
 ```
-#### basic usage
+### Verwendung
 To create a virtual environment, head to your project directory and run the following command.
 ```
 python3 -m venv myvenv
@@ -76,12 +81,16 @@ Before using your virtual environment on your project, you need to activate it u
 ```
 source myvenv/bin/activate
 ```
+Zum Deaktivieren von virtuellen Environments:
+```
+source myvenv/bin/deactivate
+```
 
-### Paket- und Environment-Manager pipenv (optional)
+## Paket- und Environment-Manager pipenv (optional)
 ```
 pip3 install --user pipenv
 ```
-### Environment-Manager pyenv (optional)
+## Environment-Manager pyenv (optional)
 ```
 brew install python3 pyenv
 ```
