@@ -40,7 +40,7 @@ sudo apt install python3-pip
 pip3 --version
 ```
 Installation von Paketen
-````
+```
 python3 -m <modulname> install pip3
 ```
 In order to keep your environment consistent, it’s a good idea to “freeze” the current state of the environment packages. To do this, run:
