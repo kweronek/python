@@ -7,14 +7,23 @@ Windows wird von hier nicht unterstütz, ist aber in den meisten Fällen möglic
 Empfehlung alias python=python3
 
 ## Ubuntu (obligatorisch)
+Ubuntu 20.04 LTS hat bereits vorinstalliert python 2.7.18 und pyton 3.8.10
+Aktuell (3/2022) ist pip3 auf Ubuntu 20.04 noch tricky. Siehe:
+https://cloudbytes.dev/snippets/upgrade-python-to-latest-version-on-ubuntu-linux
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.9
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2
-python --version
+sudo apt install python3.10
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 3
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 4
+// sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 5
+python3 --version
 ```
+Versionen umschalten mit:
+```
+sudo update-alternative -- config python3
+
 ## Mac (optional)
 ```
 brew install python
@@ -24,9 +33,10 @@ https://allurcode.com/install-latest-version-of-python-on-raspberry-pi/
 
 ## Paket- und Environment-Manager
 ### Paketmanager pip (obligatorisch)
-Der Paketmanager pip gehört zu Python, wird bei brew python mitinstalliert, bei Linux comme-ci comme-ca.
+Der Paketmanager pip gehört zu Python, wird bei brew python mitinstalliert, bei Linux comme-ci comme-ca, ansonsten:
 ```
-python3 -m pip install --user --upgrade pip
+sudo apt install python3-pip
+pip3 --version
 ```
 In order to keep your environment consistent, it’s a good idea to “freeze” the current state of the environment packages. To do this, run:
 ```
@@ -42,24 +52,21 @@ This can help ensure consistency across installations, across deployments, and a
 Voraussetzung pip installiert. (Anm. für Pyhton2 verwende virtualenv)
 ```
 python3.9 -m pip install --user virtualenv
-pip install virtualenv
+pip3 install virtualenv
 ```
 #### basic usage
 To create a virtual environment, head to your project directory and run the following command.
 ```
-python -m venv venv
+python -m venv myvenv
 ```
 Before using your virtual environment on your project, you need to activate it using
 ```
-source venv/bin/activate
+source myvenv/bin/activate
 ```
-
-
-
 
 ### Paket- und Environment-Manager pipenv (optional)
 ```
-pip install --user pipenv
+pip3 install --user pipenv
 ```
 ### Environment-Manager pyenv (optional)
 ```
@@ -83,7 +90,7 @@ brew install visual-studio-code
 andere:
 https://code.visualstudio.com/
 
-# Pythonpakete
+# Python-Pakete
 Die Packages der Python-Standard-Library findet man hier.
 Fast alle anderen Packages finden sich hier. 
 ## Basics
