@@ -22,8 +22,9 @@ python3 --version
 ```
 Versionen umschalten mit:
 ```
+sudo apt install python3.10
 sudo update-alternative -- config python3
-
+````
 ## Mac (optional)
 ```
 brew install python
