@@ -4,7 +4,7 @@ Im Zweifelsfall wird eine Plattform-unabhängige Installationsvariant angegeben.
 Installationsangaben beziehen sich auf Ubuntu und MacOS.
 Windows wird von hier nicht unterstützt, ist aber in den meisten Fällen möglich.
 
-Empfehlung: ```alias pyt=python3
+Empfehlung: `(alias pyt=python3)`
 
 ## Ubuntu (obligatorisch)
 Ubuntu 20.04 LTS hat bereits vorinstalliert python 2.7.18 und pyton 3.8.10 .
