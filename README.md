@@ -23,7 +23,7 @@ python3 --version
 Versionen umschalten mit:
 ```
 sudo apt install python3.10
-sudo update-alternative -- config python3
+sudo update-alternative --config python3
 ````
 ## Mac (optional)
 ```
@@ -33,19 +33,29 @@ brew install python
 https://allurcode.com/install-latest-version-of-python-on-raspberry-pi/
 
 ## Paket- und Environment-Manager
-### Paketmanager pip (obligatorisch)
+### Paket-Manager pip (obligatorisch)
 Der Paketmanager pip gehört zu Python, wird bei brew python mitinstalliert, bei Linux comme-ci comme-ca, ansonsten:
 ```
 sudo apt install python3-pip
 pip3 --version
 ```
+Installation von Paketen
+````
+python3 -m <modulname> install pip3
+```
 In order to keep your environment consistent, it’s a good idea to “freeze” the current state of the environment packages. To do this, run:
 ```
-pip freeze > requirements.txt
+Alle installierten Pakete anzeigen:
+```
+pip3 list
+```
+Aktuelle Konfiguration anzeigen und speichern:
+```
+pip3 freeze > requirements.txt
 ```
 This will create a requirements.txt file, which contains a simple list of all the packages in the current environment, and their respective versions. You can see the list of installed packages without the requirements format using pip list. Later it will be easier for a different developer (or you, if you need to re-create the environment) to install the same packages using the same versions:
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 This can help ensure consistency across installations, across deployments, and across developers.
 
@@ -58,7 +68,7 @@ pip3 install virtualenv
 #### basic usage
 To create a virtual environment, head to your project directory and run the following command.
 ```
-python -m venv myvenv
+python3 -m venv myvenv
 ```
 Before using your virtual environment on your project, you need to activate it using
 ```
@@ -71,7 +81,7 @@ pip3 install --user pipenv
 ```
 ### Environment-Manager pyenv (optional)
 ```
-brew install python pyenv
+brew install python3 pyenv
 ```
 
 # IDEs
