@@ -15,9 +15,9 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.9
 sudo apt install python3.10
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 3
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 4
-// sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 5
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 4
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 5
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 3
 python3 --version
 ```
 Versionen umschalten mit:
@@ -93,6 +93,7 @@ Auf Ubuntu:
 sudo snap install --classic code
 
 Auf openSuSe
+tbd
 
 Auf MAC:
 ```linux
