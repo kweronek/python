@@ -2,7 +2,7 @@
 Dies ist ein Spickzettel für Python. Es wird auf Version 3 focussiert. Ist Version 2 erforderlich wird darauf hingewiesen.
 Im Zweifelsfall wird eine Plattform-unabhängige Installationsvariant angegeben. Ggf. wird per link auf spezifische Varianten hingewiesen (Ausnahme brew).
 Installationsangaben beziehen sich auf Ubuntu und MacOS.
-Windows wird von hier nicht unterstütz, ist aber in den meisten Fällen möglich.
+Windows wird von hier nicht unterstützt, ist aber in den meisten Fällen möglich.
 
 Empfehlung alias python=python3
 
@@ -92,10 +92,8 @@ https://www.jetbrains.com/help/pycharm/installation-guide.html
 
 ## Visual Studio Code (optional)
 Auf Ubuntu:
+```
 sudo snap install --classic code
-
-Auf openSuSe
-tbd
 
 Auf MAC:
 ```linux
